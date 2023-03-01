@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Simple Counter</title>
+    <style>
+      #value {
+        font-size: 3rem;
+        color: black;
+        text-align: center;
+      }
+      #counters {
+        width: 300px;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        justify-content: space-around;
+        /* margin: 0 auto; */
+        /* left: 50%;
+        background-color: red; */
+        /* transform: translate(0, -50%); */
+      }
+      .counter {
+        min-width: 80px;
+        aspect-ratio: 1;
+        background-color: rgba(0, 255, 60, 0.534);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 5rem;
+        border: 1px solid black;
+        border-radius: 5px;
+        /* margin: 5px; */
+        /* position: relative; */
+      }
+      .counter:hover {
+        cursor: pointer;
+      }
+      input {
+        width: 50px;
+      }
+      button {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      button:hover {
+        cursor: pointer;
+      }
+      p {
+        text-align: center;
+      }
+      #reset {
+        width: 90px;
+        height: 40px;
+        background-color: rgba(0, 255, 60, 0.534);
+        border: 0.1px solid black;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <p id="value">55</p>
+    <br />
+    <div id="counters">
+      <div id="decrement" class="counter">-</div>
+      <div id="increment" class="counter">+</div>
+    </div>
+    <br />
+    <p>
+      Increment and Decrement by:
+      <input id="value-by" type="number" name="points" step="1" />
+    </p>
+    <button type="reset" id="reset">Reset</button>
+    <script src="counter.js"></script>
+  </body>
+</html>
