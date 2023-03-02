@@ -24,13 +24,14 @@
         /* transform: translate(0, -50%); */
       }
       .counter {
-        min-width: 80px;
-        aspect-ratio: 1;
-        background-color: rgba(0, 255, 60, 0.534);
+        min-width: 70px;
+        /* aspect-ratio: 1; */
+        height: 70px;
+        background-color: rgb(90, 255, 216);
         display: flex;
         justify-content: center;
         align-items: center;
-        font-size: 5rem;
+        font-size: 4rem;
         border: 1px solid black;
         border-radius: 5px;
         /* margin: 5px; */
@@ -38,17 +39,19 @@
       }
       .counter:hover {
         cursor: pointer;
+        transform: scale(1.05);
       }
       input {
         width: 50px;
       }
       button {
-        position: relative;
+        position: fixed;
         left: 50%;
         transform: translateX(-50%);
       }
       button:hover {
         cursor: pointer;
+        transform: translateX(-50%) scale(1.05);
       }
       p {
         text-align: center;
@@ -56,7 +59,7 @@
       #reset {
         width: 90px;
         height: 40px;
-        background-color: rgba(0, 255, 60, 0.534);
+        background-color: rgb(90, 255, 216);
         border: 0.1px solid black;
         border-radius: 5px;
       }
