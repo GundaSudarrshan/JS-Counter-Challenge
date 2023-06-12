@@ -34,6 +34,9 @@
         font-size: 4rem;
         border: 1px solid black;
         border-radius: 5px;
+        border: none;
+        box-shadow: 2px 2px 5px 0 rgb(47, 43, 43);
+        user-select: none;
         /* margin: 5px; */
         /* position: relative; */
       }
@@ -48,10 +51,21 @@
         position: fixed;
         left: 50%;
         transform: translateX(-50%);
+        border: none;
       }
       button:hover {
         cursor: pointer;
         transform: translateX(-50%) scale(1.05);
+      }
+      #increment:hover {
+        background-color: green;
+        color: white;
+        transition: ease 0.2s;
+      }
+      #decrement:hover {
+        background-color: rgb(215, 40, 40);
+        color: white;
+        transition: ease-in 0.2s;
       }
       p {
         text-align: center;
@@ -63,10 +77,47 @@
         border: 0.1px solid black;
         border-radius: 5px;
       }
+
+      /* adding animation effect  */
+      #value::after {
+        content: "+1";
+        position: relative;
+        font-size: 15px;
+        right: -20px;
+        color: green;
+        animation: positive 0.3s 1;
+        /* animation-iteration-count: 5; */
+        /* animation-name: positive; */
+        /* animation-duration: 0.3s; */
+        /* animation-timing-function: infinite; */
+      }
+      @keyframes positive {
+        0% {
+          content: "+1";
+          /* visibility: hidden; */
+          top: 0px;
+        }
+        10% {
+          /* content: "+1"; */
+        }
+
+        100% {
+          top: -70px;
+          visibility: hidden;
+          content: "";
+        }
+      }
+      span {
+        width: 100px;
+        height: 100px;
+        background-color: aqua;
+      }
     </style>
   </head>
   <body>
-    <p id="value">55</p>
+    <span>
+      <p id="value">55</p>
+    </span>
     <br />
     <div id="counters">
       <div id="decrement" class="counter">-</div>
